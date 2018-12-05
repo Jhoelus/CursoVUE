@@ -1,0 +1,6 @@
+ v-model = primero bindear :value="contrasena"
+            despues actualizar valor @input="contrasena = $event.target.value"
+
+$event es una propiedad como $data que ofrece VUE para acceder a la informacion del evento
+
+v-model will ignore the initial value, checked or selected attributes found on any form elements. 

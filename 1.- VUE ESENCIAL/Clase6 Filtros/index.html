@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>VUE Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+    <main>
+        <ul>
+            <li v-for="juego in buscarJuego">{{juego.titulo | mensajeAlReves}}</li>
+            <!-- <li v-for="juego in mejoresJuegos">{{juego.titulo | mensajeAlReves}}</li> -->
+        </ul>
+        <input type="range" min="0" max="10" v-model="minimo">
+        <br>
+        <input type="search" v-model="busqueda" placeholder="Buscar Juego">
+       <pre> {{ $data }} </pre>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vue test</title>
+</head>
+<body>
+  <main>
+    <h1 v-show='conectado'>{{ mensaje }}</h1>
+    <h1 v-if='!conectado'>{{ mensaje }} X</h1>
+    <h3 v-if='edad < 18'> No puedes Entrar</h3>
+    <h3 v-else-if='edad > 200'> Eres inmortal</h3>
+    <h3 v-else> Puedes entrar</h3>
+    <input type="text" v-model='mensaje'>
+    <br /><br />   
+    <div>
+        <input type="text" id="inputTarea" v-model="nuevaTarea">
+        <button v-on:click="addTarea">Agregar_Tarea</button>
+        <ul>
+          <li v-for="tarea in tareas"> {{ tarea }} </li>
+        </ul>
+    </div>
+    <!-- v-on:keyup.enter -->
+    <form v-on:submit.prevent="addTarea">
+        <div>
+            <input type="text" id="inputTarea" v-model="nuevaTarea">
+            <input type="submit" value="Agregar_Tarea">
+            <ul>
+              <li v-for="tarea in tareas"> {{ tarea }} </li>
+            </ul>
+        </div>
+    </form>
+    <template>
+        <!-- ul>li>a[href="#"]{enlace}*3 -->
+      <ul>
+        <li v-for="(dia,index) in dias">{{index}}-{{dia}}</li>
+      </ul>
+      <ul>
+          <li v-for="(value, key, index) in persona">{{index}}.{{key}}: {{value}}</li>
+        </ul>
+    </template>
+
+    <pre>{{ $data }}</pre>
+
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

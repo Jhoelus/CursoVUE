@@ -1,0 +1,1 @@
+Para validar las propiedades "Props" ya no es una matriz ahora es un objeto

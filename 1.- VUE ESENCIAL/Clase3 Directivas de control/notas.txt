@@ -1,0 +1,1 @@
+Para usar las herramienta "VUE TOOLS" en el navegador sin un servidor web vamos a configuraciones>extenciones>detalles>Permitir el acceso a las URL del archivo

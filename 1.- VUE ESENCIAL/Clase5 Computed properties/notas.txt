@@ -1,0 +1,3 @@
+Un propiedad computada hace un tratamiento de información antes de renderizar en la vista.
+
+La diferencia entre una propiedad computada y un metodo es que mientras la informacion utilizada en el modelo no cambie la propiedad computada solo se avalura una una vez y el metodo siempre se evalua.

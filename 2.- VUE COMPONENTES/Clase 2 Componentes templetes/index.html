@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>VUE Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <main>
+        <elegir-ganador :listado="personas" inline-template>
+            <div>
+                <h3 v-if='ganador'> El ganador es {{ganador}}</h3>
+                <template v-else>
+                    <h1> Participantes </h1>
+                    <ul>
+                        <li v-for='persona in listado'> {{persona}}</li>
+                    </ul>
+                </template>
+                <button @click='elegirGanador'> Elegir ganador </button>
+            </div>
+        </elegir-ganador>
+        <pre> {{ $data }} </pre>
+    </main>
+    <!-- Con Script -->
+    <!-- <script type="text/template" id="elegir-ganador-template">
+        <div>
+                <h3 v-if='ganador'> El ganador es {{ganador}}</h3>
+                <template v-else>
+                    <h1> Participantes </h1>
+                    <ul>
+                        <li v-for='persona in listado'> {{persona}}</li>
+                    </ul>
+                </template>
+                <button @click='elegirGanador'> Elegir ganador </button>
+            </div>
+    </script> -->
+
+
+    <!-- con templete -->
+    <!-- <template id="elegir-ganador-template">
+        <div>
+                <h3 v-if='ganador'> El ganador es {{ganador}}</h3>
+                <template v-else>
+                    <h1> Participantes </h1>
+                    <ul>
+                        <li v-for='persona in listado'> {{persona}}</li>
+                    </ul>
+                </template>
+                <button @click='elegirGanador'> Elegir ganador </button>
+            </div>
+    </template> -->
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+El script que se tiene en el index con el type = "text/template"
+ es primordial para que funcione ya que como no exite un script "text/template" el browser no lo reconocera y lo omitira sin embargo
+ vive en el DOM y puede ser localizadoy referenciado.
+ 

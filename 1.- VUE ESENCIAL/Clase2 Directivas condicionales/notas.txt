@@ -1,0 +1,1 @@
+Directiva = atributos que brindan funcionalidad extra a una etiqueta HTML

@@ -1,0 +1,1 @@
+Apartir de la version 2.1 existen los scope slots y estos sirven para acceder a los datos del modelo.

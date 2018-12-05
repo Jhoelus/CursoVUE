@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>VUE Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <usuarios>
+            <h1>Ejemplo usuarios</h1>
+        </usuarios>
+        <pre> {{ $data }} </pre>
+    </main>
+    <template id="usuarios-template">
+        <div>
+            <section class="cabecera">
+                <slot></slot>
+                <input type="text" v-model="busqueda" placeholder="buscar ... ">
+            </section>
+            <hr>
+            <section>
+                <usuario v-for="user in filtrarBusqueda" :key="user.nombre" :user="user"></usuario>
+            </section>
+        </div>
+    </template>
+    <template id="user-template">
+        <div class="usuario">
+            <img align="left" :src="user.foto" :alt="user.nombre">
+            <section>
+                <h1>{{ user.nombre }}</h1>
+                <small>{{ user.nombre }}</small>
+            </section>
+        </div>
+    </template>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>VUE Page Eventos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+    <main>
+        <ul>
+            <li v-for="tarea in tareas">
+                {{tarea}}
+            </li>
+        </ul>
+        <input type="text" placeholder="Introduce tareas" v-model="texto">
+        <input type="button" value="Enviar tarea" v-on:click="agregarTarea()">
+        <br />
+        <br />
+        <form>
+            <input type="text" placeholder="Introduce tareas" v-model="texto">
+            <input type="submit" value="submit" v-on:click="agregarTarea()">
+        </form>
+        <br />
+        <form v-on:submit.prevent="agregarTarea()">
+            <input type="text" placeholder="Introduce tareas" v-model="texto">
+            <input type="submit" value="submit evt en el form">
+        </form>
+       <pre> {{ $data }} </pre>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

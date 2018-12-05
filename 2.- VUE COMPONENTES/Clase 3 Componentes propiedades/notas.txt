@@ -1,0 +1,2 @@
+Las propiedades se pasan de padre a hijo, no al reves. 
+Si se necesita modificar el valor en el hijo se debe crear una copia y usarlo ó se crea una propiedad computado que modifique y regrese el nuevo valor

@@ -1,0 +1,15 @@
+La instancia VUE es el intermediario entre la logica de la aplicacion y el DOM.
+El patron de diseño que sigue VUE es VMMV
+No se pueden crear propiedades desde fuera(a traves del proxi) y hacerlas reactivas ya que al montar la instancia VUE se cran guetter y setters para cada propiedades
+
+Ciclo de vida de VUE
+1. New Vue()
+2. before create
+3. created
+4. compilacion del template
+5. beforeMount
+6. mounted
+7. before updaate
+8. updaate
+9. beforeDestroy
+10. destroy

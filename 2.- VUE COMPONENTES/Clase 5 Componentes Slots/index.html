@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>VUE Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <main>
+        <alerta tipo="alerta--exito" posicion="alerta--abajo-derecha">
+            <template slot="header" slot-scope="datos">{{datos.headPropiedad}}</template>
+            <template>Nuevo contenido del body xxxx</template>
+            <template slot="footer">Pie de pag.</template>
+        </alerta>
+        <alerta tipo="alerta--error" posicion="alerta--abajo-arriba">
+            <template slot="header" slot-scope="datos">{{datos.headPropiedad}}</template>
+            <template>Nuevo contenido del body xxxx</template>
+            <template slot="footer">Pie de pag.</template>
+        </alerta>
+       <pre> {{ $data }} </pre>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

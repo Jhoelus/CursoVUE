@@ -1,0 +1,5 @@
+This dentro de methods hace referencia a la instancia VUE
+Un submit simpre recarga la pagina
+
+prevent lo que hace es detener el comportamiento por default 
+v-on:submit.prevent="agregarTarea()" 

@@ -1,0 +1,5 @@
+https://randomuser.me/
+
+Si ya se tienen codigo en vue-resource y se quiere migrar a axios, solo basta con hacer un pequeño cambio en la instancia de vue, agregamos
+Vue.prototype.$http = axios, aparte tenemos que cambiar la obtencion de la respuesta ya que por norma vue-resource trae la respuesta en 
+un objeto llamado "body" y axios en uno llamado "data".

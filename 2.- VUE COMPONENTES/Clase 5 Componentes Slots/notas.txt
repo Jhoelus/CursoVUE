@@ -1,0 +1,2 @@
+Slots: Permiten configurar el template, es anivel mas visual(html).
+Solo puede existir un slot anonimo en un componente

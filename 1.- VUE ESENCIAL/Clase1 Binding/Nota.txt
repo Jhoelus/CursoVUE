@@ -1,0 +1,4 @@
+El binding es la relacion que existe entre componentes HTML y un modelo de datos.
+Anterior mente con JAVASCRIPT y JQUERY se lograba el mismo resultado pero era necesario
+de mas lineas de codigo y era mas tediosos. Los Frameworks como VUE, ANGULAR, REACT, EMBER ..etc
+Bienen a mejorar esta practica.

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>VUE Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <main>
+        <candidato v-for="candidato in candidatos" 
+            :nombre   = "candidato.name.first" 
+            :correoe  = "candidato.email" 
+            :imagen   = "candidato.picture.thumbnail"
+            :location = "candidato.location"
+            :genero   = "candidato.gender"></candidato>
+       <pre> {{ $data }} </pre>
+    </main>
+    <template id="candidato-template">
+        <blockquote>
+            <img :src="imagen" align="right">
+            <h3>{{ nombre  }}</h3>
+            <h3>{{ correoe }}</h3>
+            <h3>{{ genero }}</h3>
+            <h2>Location</h2>
+            <ul>
+                <li v-for="(value,key,index) in location">
+                    {{key}}:{{value}}
+                </li>
+            </ul>
+            <hr>
+        </blockquote>
+    </template>
+    <script src="main.js"></script>
+</body>
+</html>
