@@ -1,0 +1,8 @@
+1. npm install -g vue-cli
+2. vue init webpack-simple hello-vue
+3. cd hello-vue
+4. npm install
+
+los <style scope> nos indica que ese estilo solo sera aplicado a ese componente.
+
+los <style module> nos garantiza que no se propagara ese estilo

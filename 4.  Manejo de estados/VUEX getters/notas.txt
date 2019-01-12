@@ -1,0 +1,3 @@
+Las actions son similares a las mutation pero asincronas.
+mutation: sincronas
+actions: asincronas, no actuan directamente sobre el estado si no que le hablan a una mutation.

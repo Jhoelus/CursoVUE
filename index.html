@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vue test</title>
+</head>
+<body>
+  <main>
+    <test @exe="decirHola">
+        <h2 slot-scope="algo">{{algo}}</h2>
+        <h2 slot="slotDos" slot-scope="datos">{{datos}}</h2>
+    </test>
+    <pre>{{ $data }}</pre>
+  </main>
+  <template id="test">
+    <div>
+      <slot :cabeza="encabezado">
+          <h1>Slot 1</h1>
+      </slot>
+      <slot name="slotDos" :cabeza="encabezado">
+          <h1>Slot 2</h1>
+      </slot>
+      <button @click="ejecutarAlgo">emit</button>
+      <button @click="ejecutarAlgo2">emit 2</button>
+    </div>    
+  </template>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
